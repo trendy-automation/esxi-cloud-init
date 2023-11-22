@@ -2,22 +2,22 @@
 - hosts: localhost
   gather_facts: false
   vars:
-    vmname: docker
+    vmname: kolesnik-test2
     cpu: 2
     mem: 8192
     disk: 32G
     # dhcp or ip
     ip: dhcp
-    ds: ds-nvme-evo5
+    ds: Pure_02
     data_disks:
       # optional 
       # docker-data: 20G
     # bios or efi
     firmware: bios
     serial_port: no
-    user_data_file: cloud-init-d/ud-docker.yaml
+    user_data_file: cloud-init-d/ud-vm-tools.yaml
     ubuntu_version: 22.04
-    ssh_public_key_file: ~/.ssh/id_rsa.pub
+    ssh_public_key_file: /home/ilya/shturval_ssh.pub
     # optional
     # mac_address: AA:BB:CC:DD:EE:FF
   vars_files:
