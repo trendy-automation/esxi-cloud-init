@@ -10,6 +10,10 @@ When using ESXi free license the vSphere API is read-only which means this playb
 
 ## TLDR
 
+apt install ansible
+curl -L -o - "https://github.com/vmware/govmomi/releases/latest/download/govc_$(uname -s)_$(uname -m).tar.gz" | tar -C /usr/local/bin -xvzf - govc
+export GOVC_URL=https://user:pass@host/sdk
+
 1. Clone this repo
 2. update `group_vars/all.yaml` with your network settings and ESXi IP and login credentials
 3. update `vars` in `playbook.yaml`
